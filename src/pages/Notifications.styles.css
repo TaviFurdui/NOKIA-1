@@ -1,0 +1,118 @@
+.notifications-container {
+  margin-left: 200px;
+  margin-top: 80px;
+}
+
+.notifications-header {
+  font-family: "Montserrat", sans-serif;
+  padding: 20px;
+}
+
+.notification-item {
+  width: 70%;
+  height: 80px;
+  background-color: #e6e6fa;
+  margin-top: 30px;
+  -webkit-box-shadow: 2px 5px 10px -5px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 2px 5px 10px -5px rgba(0, 0, 0, 0.75);
+  box-shadow: 2px 5px 10px -5px rgba(0, 0, 0, 0.75);
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.notification-text {
+  font-size: 24px;
+}
+
+.butoane-container {
+  display: flex;
+  flex-direction: column;
+  width: 150px;
+}
+
+.adauga-notificare {
+  background-color: #e6e6fa;
+  border-radius: 6px;
+  border-color: transparent;
+  margin-top: 20px;
+  height: 30px;
+  outline: none;
+}
+
+.notifications-popup-header {
+  font-size: 36px;
+  padding-left: 30px;
+  position: relative;
+  top: 20px;
+  color: white;
+}
+
+.horizontal-line-popup {
+  margin-top: 30px;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.notifications-stacked {
+  margin-top: 20px;
+  overflow: auto;
+  height: 85%;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #483d8b;
+  border-radius: 5px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: black;
+  border-radius: 5px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.notification-popup-section {
+  width: 350px;
+  height: 90%;
+  background-color: #483d8b;
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin-right: 200px;
+  margin-top: 60px;
+  border-radius: 10px;
+  position: fixed;
+  z-index: 1;
+}
+
+.notification-text-popup {
+  color: white;
+  font-size: 20px;
+}
+
+.notification-container-item {
+  padding: 20px 5px 20px 5px;
+  margin-left: 10px;
+  margin-right: 10px;
+
+  border-radius: 10px;
+}
+
+.notification-container-item:hover {
+  background-color: #4b0082;
+}
+
+.notification-icon {
+  transform: translateY(30%);
+  padding-right: 10px;
+}

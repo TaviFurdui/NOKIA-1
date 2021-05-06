@@ -1,0 +1,74 @@
+.settings-container {
+  margin-left: 250px;
+  margin-top: 80px;
+}
+
+.setari-header {
+  font-size: 44px;
+  font-family: "Bitter", serif;
+}
+
+.notificari-header {
+  color: gray;
+}
+
+.switches-container {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+}
+
+hr {
+  width: 500px;
+  margin: 0px;
+}
+
+.switch {
+  margin-top: 20px;
+}
+
+.switch-option-1 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.securitate-text {
+  font-family: "PT Sans", sans-serif;
+  font-weight: bold;
+}
+
+.toate-notificarile-text {
+  font-family: "PT Sans", sans-serif;
+  font-weight: bold;
+  font-size: 22px;
+}
+
+.tickete-text {
+  font-family: "PT Sans", sans-serif;
+  font-weight: bold;
+}
+
+.tickete-text-priority {
+  font-family: "PT Sans", sans-serif;
+  font-weight: bold;
+  position: absolute;
+  margin-left: 40px;
+}
+
+.KPI-text {
+  font-family: "PT Sans", sans-serif;
+  font-weight: bold;
+}
+
+.switch-option-2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.switch-option-3 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}

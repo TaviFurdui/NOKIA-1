@@ -12,18 +12,14 @@ export default class Header extends React.Component {
         super(props);
         
         this.state = {
-            showMenu: false,
-            toggleNotifications:false,
+            toggleNotifications:false
         }
     }
-    
 
-      
-     
     componentDidMount()
     {
 
-        axios.get('http://localhost:81/Nokia/afiseaza_notificare.php')
+        axios.get('http://localhost:81/Nokia/NOKIA-1/afiseaza_notificare.php')
           .then( response =>{
             console.log(response);
             this.setState({row:response.data});
@@ -53,7 +49,6 @@ export default class Header extends React.Component {
                 <div className = "account-section">
                     
                     <button onClick = {this.changeValue} ><MdNotifications className = "notifications-icon"></MdNotifications></button>
-                   
                     <IoPersonCircleOutline className = "account-photo"></IoPersonCircleOutline>
                     <h1 className = "account-name">John Doe</h1>
 

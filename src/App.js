@@ -38,7 +38,7 @@ class App extends React.Component {
  componentDidMount()
     {
 
-        axios.get('http://localhost/react-php/citeste_notificare.php')
+        axios.get('http://localhost:81/Nokia/NOKIA-1/afiseaza_notificare.php')
           .then( response =>{
             console.log(response);
             this.setState({row:response.data});
@@ -65,7 +65,7 @@ class App extends React.Component {
           <Menu></Menu>
 
           <div style = {{display:this.state.toggleNotifications ? 'block': 'none'}} className="notification-popup-section">
-                        <text className = "notifications-popup-header">Notifcari</text>
+                        <text className = "notifications-popup-header">Notificari</text>
                         <hr className = "horizontal-line-popup"></hr>
                         <div className = "notifications-stacked">
                                 {this.state.row.map(datum => {
@@ -76,6 +76,9 @@ class App extends React.Component {
                                             <BsFillXCircleFill className = "notification-icon" style = {{color:"red", fontSize:30}}></BsFillXCircleFill>
                                             <div className="notification-text-popup">
                                             {datum.MESAJ}
+                                            <div className="data_notificare" style = {{textAlign:'right', fontSize:15}} >
+                                              {datum.DATA_CREAT}
+                                            </div>
                                         </div> 
                                     </div>
                                     )
@@ -86,6 +89,9 @@ class App extends React.Component {
                                             <AiFillWarning className = "notification-icon"  style = {{color:"yellow", fontSize:30}}></AiFillWarning>
                                             <div className="notification-text-popup">
                                             {datum.MESAJ}
+                                            <div className="data_notificare" style = {{textAlign:'right', fontSize:15}} >
+                                              {datum.DATA_CREAT}
+                                            </div>
                                         </div> 
                                     </div>
                                     
@@ -96,6 +102,9 @@ class App extends React.Component {
                                             <BsFillInfoCircleFill className = "notification-icon" style = {{color:"blue", fontSize:30}}></BsFillInfoCircleFill>
                                             <div className="notification-text-popup">
                                             {datum.MESAJ}
+                                            <div className="data_notificare" style = {{textAlign:'right', fontSize:15}} >
+                                              {datum.DATA_CREAT}
+                                            </div>
                                         </div> 
                                     </div>
                                     )

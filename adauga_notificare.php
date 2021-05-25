@@ -5,17 +5,20 @@
     include 'conn.php';
 
     $mesaj = $_POST['Mesaj'];
+    $priority = $_POST['Priority'];
 
     $sql = "
     INSERT INTO [TEST].[NOTIFICARI] 
-    ([MESAJ],[DATA_CREAT]) 
+    ([MESAJ],[DATA_CREAT],[PRIORITY]) 
     VALUES (
         :MESAJ,
-        GETDATE()
+        GETDATE(),
+        :PRIORITY
     ) 
     ";
     $params = array(
-        ':MESAJ' => $mesaj
+        ':MESAJ' => $mesaj,
+        ':PRIORITY' => $priority
     );
     try{
         $stmt = $conn->prepare($sql);

@@ -5,12 +5,8 @@
     include 'conn.php';
 
     $sql = "
-        SELECT [MESAJ], FORMAT([DATA_CREAT],'dd/MM/yyyy hh:mm tt') AS [DATA_CREAT] FROM [TEST].[USER_TO_NOTIFICATIONS] utn
-        left join [TEST].[NOTIFICATIONS_INDEX] notif
-        on utn.NOTIFICATION_ID = notif.[PRIORITY]
-        left join [TEST].[NOTIFICARI] inc
-        on notif.[PRIORITY] = inc.[PRIORITY]
-        ORDER BY [DATA_CREAT] DESC
+        SELECT [MESAJ],
+        DATEDIFF() FROM [TEST].[NOTIFICARI]
     ";
     try{
         $stmt = $conn->prepare($sql);

@@ -27,6 +27,7 @@ export default class Notifications extends Component {
         this.state = {
             row:[],
             Mesaj:'',
+            Prioritate:'',
             Priority:'',
             Numar_inregistrari: 0,
             toggle_notifications:'none',
@@ -45,7 +46,7 @@ export default class Notifications extends Component {
         })
     }*/
     getNotificari = () => {
-        axios({method:'get', url:'http://localhost:81/Nokia/afiseaza_notificare.php'}).then(res=>{
+        axios({method:'get', url:'http://localhost:81/Nokia/NOKIA-1/afiseaza_notificare.php'}).then(res=>{
             this.setState({data:res.data});
         });
     }
@@ -68,7 +69,7 @@ export default class Notifications extends Component {
         }
         var payload = new FormData();
         payload.append('Priority',this.state.Priority);
-        axios.post('http://localhost/echipa4-php/introduce.php',payload).then(res=>{
+        axios.post('http://localhost:81/Nokia/NOKIA-1/introduce.php',payload).then(res=>{
             this.setState({data:res.data});
         });
 
@@ -78,7 +79,8 @@ export default class Notifications extends Component {
         }
         var payload = new FormData();
         payload.append('Mesaj',this.state.Mesaj);
-        axios.post('http://localhost/echipa4-php/adauga_notificare.php',payload).then(res=>{
+        payload.append('Priority',this.state.Priority);
+        axios.post('http://localhost:81/Nokia/NOKIA-1/adauga_notificare.php',payload).then(res=>{
             this.setState({data:res.data});
         });
 
@@ -208,22 +210,20 @@ export default class Notifications extends Component {
             }
         } 
     }
-    componentDidMount()
-    {
+    //componentDidMount()
+    //{
 
-        axios.get('http://localhost/react-php/citeste_notificare.php')
-          .then( response =>{
-            console.log(response);
-            this.setState({row:response.data});
-          })
-          .catch(function (error) {
-          console.log(error);
-          })
-          .then(function () {
 
-          });
+          //VERIFICARE IN BAZA DE DATE DACA A APARUT O NOTIFICARE NOUA
+          /*setInterval(function(){
+            axios({
+                method:'post',
+                url:'http://localhost:81/Nokia/NOKIA-1/verificare.php'
+            })
+            .then(res => this.setState({row:res.data}));
+          })*/
         
-    }
+    //}
     /*componentDidMount(){
         axios({
             method:'get',
